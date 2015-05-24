@@ -37,30 +37,15 @@ public class ObserverSample {
 
     public static void main(String[] args) {
         // Initialize MVC and Window objects.
-        Window window = new Window();
+         Window window = new Window();
         Model model = new Model();
-        List<Observer> mInvalidViews = new ArrayList<>();
-        //Observer v = new AlternativeView(model);
+        List<Showable> views = new ArrayList<>();
         Controller controller = new Controller(model);
-        //List<View> views = new ArrayList<>();
-        //views.add(new View("View 1", window, model));
-        //views.add(new View("View 2", window, model));
-        //views.add(new View("View 3", window, model));
-        mInvalidViews.add(new AlternativeView("View ", window, model));
-        //mInvalidViews.add(v);
-        while (true) {
-            controller.readInput();
-            
-            for (Observer vv : mInvalidViews) {
-                vv.update();
-            }
-            /*
-            if (!v.isValid()) {
-                v.show();
-            }*/
-        }
-
-        // Start the event loop.
-
+        views.add(new View("View 1", window, model));
+        views.add(new View("View 2", window, model));
+        views.add(new View("View 3", window, model));
+        views.add(new AlternativeView("View ", window, model));
+       window.startEventLoop(controller, views);
+    
     }
 }
