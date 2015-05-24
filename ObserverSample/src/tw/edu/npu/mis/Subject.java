@@ -25,10 +25,14 @@
  */
 package tw.edu.npu.mis;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author STP
  */
 public class Subject {
+    
     
 }
