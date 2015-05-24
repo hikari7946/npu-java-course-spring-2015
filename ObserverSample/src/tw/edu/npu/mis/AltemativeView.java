@@ -30,5 +30,10 @@ package tw.edu.npu.mis;
  * @author STP
  */
 public class AltemativeView {
+      private final Model mModel;
+    private boolean mIsValid;
+    
+    private final String mName;
+    private final Window mWindow;
     
 }
