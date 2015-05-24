@@ -25,7 +25,6 @@
  */
 package tw.edu.npu.mis;
 
-
 /**
  *
  * @author STP
@@ -36,19 +35,13 @@ public class AlternativeView implements Observer {
     
     private final String mName;
     private final Window mWindow;
-    //private final Model mModel;
     
-    /*public AlternativeView(Model model) {
-        mModel = model;
-        mModel.attach(this);
-    }*/
-    public AlternativeView(String name, Window window, Model model) {
+     public AlternativeView(String name, Window window, Model model) {
         mName = name;
         mWindow = window;
         mModel = model;
     }
-    
-    public boolean isValid() {
+      public boolean isValid() {
         return mIsValid;
     }
     
@@ -57,14 +50,10 @@ public class AlternativeView implements Observer {
         System.out.println(new StringBuilder(mModel.getData()).reverse());
         mIsValid = true;
     }
-    
-
-
-
-
-    @Override
+     @Override
     public void update() {
         show();
         //mIsValid = false;
     }
+    
 }
