@@ -33,6 +33,19 @@ import java.util.List;
  * @author STP
  */
 public class Subject {
+    private List<Observer> mObservers = new ArrayList<>();
+    
+    public void attach(Observer o) {
+        mObservers.add(o);
+    }
+    public void detach(Observer o) {
+        mObservers.remove(o);
+    }
+    public void notifyObserver() {
+        for (Observer o : mObservers){
+            o.update();
+        }
+    }
     
     
 }
