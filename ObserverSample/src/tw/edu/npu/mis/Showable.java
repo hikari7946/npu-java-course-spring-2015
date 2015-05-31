@@ -30,6 +30,9 @@ package tw.edu.npu.mis;
  * @author STP
  */
 public interface Showable {
+    /**
+     * 查看onDraw打印數據
+     */
     void onDraw();
     
 }
