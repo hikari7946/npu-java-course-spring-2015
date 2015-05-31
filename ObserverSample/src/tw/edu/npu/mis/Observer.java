@@ -29,7 +29,10 @@ package tw.edu.npu.mis;
  *
  * @author STP
  */
-public interface Observer {
+public interface Observer {      
+    /**
+     * 加到ArrayList，讓Window.mInvalidViews()使用
+     */
      void update();
     
 }
