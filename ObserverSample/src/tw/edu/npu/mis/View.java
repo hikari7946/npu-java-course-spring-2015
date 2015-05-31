@@ -37,7 +37,7 @@ public class View implements Observer, Showable{
     private final Model mModel;
     
     /**
-     * 查看class 定義建構值
+     * view class 定義建構值
      * @param name
      * @param window
      * @param model 
