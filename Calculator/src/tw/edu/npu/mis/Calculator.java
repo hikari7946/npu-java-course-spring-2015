@@ -11,9 +11,9 @@ package tw.edu.npu.mis;
 public class Calculator extends java.util.Observable{
  int x,y;
  
-    String number = "";
-    String Access = "";
-    String Determine = "";
+    String digital = "";
+    String store = "";
+    String decide = "";
     
     /**
      * The available operators of the calculator.
@@ -40,7 +40,7 @@ public class Calculator extends java.util.Observable{
     
     public void appendDigit(int digit) {
         // TODO code application logic here
-         number += String.valueOf(digit);
+         digital += String.valueOf(digit);
       getDisplay();
     }
     
@@ -52,9 +52,9 @@ public class Calculator extends java.util.Observable{
         // TODO code application logic here
          switch(operator){
             case CLEAR:
-                number = "0";
+                digital = "0";
                 getDisplay();
-                number = "";
+                digital = "";
                 
                 break;
             case CLEAR_ENTRY:
@@ -63,53 +63,53 @@ public class Calculator extends java.util.Observable{
                 break;
             case EQUAL:
                 
-               if(Determine == "+"){
-                        y= Integer.parseInt(number);
-                        number = String.valueOf(x+y);
+               if(decide == "+"){
+                        y= Integer.parseInt(digital);
+                        digital = String.valueOf(x+y);
                         getDisplay();
-                        number ="";
+                        digital ="";
                }
-             if(Determine == "-"){
-                        y= Integer.parseInt(number);
-                        number = String.valueOf(x-y);
+             if(decide == "-"){
+                        y= Integer.parseInt(digital);
+                        digital = String.valueOf(x-y);
                         getDisplay();
-                        number ="";
+                        digital ="";
                }
-             if(Determine == "*"){
-                        y= Integer.parseInt(number);
-                        number = String.valueOf(x*y);
+             if(decide == "*"){
+                        y= Integer.parseInt(digital);
+                        digital = String.valueOf(x*y);
                         getDisplay();
-                        number ="";
+                        digital ="";
                }
-             if(Determine == "/"){
-                        y= Integer.parseInt(number);
-                        number = String.valueOf(x/y);
+             if(decide == "/"){
+                        y= Integer.parseInt(digital);
+                        digital = String.valueOf(x/y);
                         getDisplay();
-                        number ="";
+                        digital ="";
                }
             case PLUS:
-                x= Integer.parseInt(number);
-                number = "";
+                x= Integer.parseInt(digital);
+                digital = "";
                 getDisplay();
-                Determine = "+";
+                decide = "+";
                 break;
             case MINUS:
-                x= Integer.parseInt(number);
-                number = "";
+                x= Integer.parseInt(digital);
+                digital = "";
                 getDisplay();
-                Determine = "-";
+                decide = "-";
                 break;
             case TIMES:
-                x= Integer.parseInt(number);
-                number = "";
+                x= Integer.parseInt(digital);
+                digital = "";
                 getDisplay();
-                Determine = "*";
+                decide = "*";
                 break;
             case OVER:
-                x= Integer.parseInt(number);
-                number = "";
+                x= Integer.parseInt(digital);
+                digital = "";
                 getDisplay();
-                Determine = "/";
+                decide = "/";
                 break;
             case PLUS_MINUS:
                 break;
@@ -139,7 +139,7 @@ public class Calculator extends java.util.Observable{
     public String getDisplay() {
         // TODO code application logic here
        setChanged();
-        notifyObservers(number);
+        notifyObservers(digital);
         return null;
     }
 
