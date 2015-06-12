@@ -40,6 +40,8 @@ public class Calculator extends java.util.Observable{
     
     public void appendDigit(int digit) {
         // TODO code application logic here
+         number += String.valueOf(digit);
+      getDisplay();
     }
     
     public void appendDot() {
