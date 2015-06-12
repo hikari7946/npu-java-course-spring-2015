@@ -10,5 +10,7 @@ package tw.edu.npu.mis;
  * @author STP
  */
 public class Controller {
+    Calculator Cal;
+    aaa mnewjframe;
     
 }
