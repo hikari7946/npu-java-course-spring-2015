@@ -50,6 +50,93 @@ public class Calculator extends java.util.Observable{
     
     public void performOperation(Operator operator) {
         // TODO code application logic here
+         switch(operator){
+            case CLEAR:
+                number = "0";
+                getDisplay();
+                number = "";
+                
+                break;
+            case CLEAR_ENTRY:
+                break;
+            case BACKSPACE:
+                break;
+            case EQUAL:
+               switch(Determine){
+                    case "+":
+                        y= Integer.parseInt(number);
+                        number = String.valueOf(x+y);
+                        getDisplay();
+                        number ="";
+                        break;
+                    case "-":
+                       y= Integer.parseInt(number);
+                        number = String.valueOf(x-y);
+                        getDisplay();
+                        number ="";
+                         break;
+                    case "*":
+                       y= Integer.parseInt(number);
+                        number = String.valueOf(x*y);
+                        getDisplay();
+                        number ="";
+                         break;
+                    case "/":
+                       y= Integer.parseInt(number);
+                        number = String.valueOf(x/y);
+                        getDisplay();
+                        number ="";
+                         break;
+               }
+              
+                break;
+            case PLUS:
+                x= Integer.parseInt(number);
+                number = "";
+                getDisplay();
+                Determine = "+";
+                break;
+            case MINUS:
+                x= Integer.parseInt(number);
+                number = "";
+                getDisplay();
+                Determine = "-";
+                break;
+            case TIMES:
+                x= Integer.parseInt(number);
+                number = "";
+                getDisplay();
+                Determine = "*";
+                break;
+            case OVER:
+                x= Integer.parseInt(number);
+                number = "";
+                getDisplay();
+                Determine = "/";
+                break;
+            case PLUS_MINUS:
+                break;
+            case RECIPROCAL:
+                break;
+            case PERCENT:
+                break;
+            case SQRT:
+                break;
+            case MEM_CLEAR:
+                break;
+            case MEM_SET:
+                break;
+            case MEM_PLUS:
+                break;
+            case MEM_MINUS:
+                break;
+            case MEM_RECALL:
+                break;
+            
+                
+        
+        }
+    
     }
     
     public String getDisplay() {
