@@ -22,6 +22,16 @@ public class Controller {
         mcul.appendDigit(Integer.parseInt(da));
         
     }
+     public void setOperator(String oper)
+    {
+        mcul.notation(oper);
+    }
+    
+    public void addView(aaa jframe){
+		mnewjframe = jframe;
+                mcul.getDisplay();
+   
+    }
     
 }
 
