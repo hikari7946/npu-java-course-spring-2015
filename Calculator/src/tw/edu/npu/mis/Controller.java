@@ -25,7 +25,7 @@ public class Controller {
     }
      public void setOperator(String oper)
     {
-        mcul.notation(oper);
+        mcul.sign(oper);
     }
     
     public void addView(aaa jframe){

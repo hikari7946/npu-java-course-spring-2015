@@ -10,7 +10,7 @@ package tw.edu.npu.mis;
  */
 public class Calculator extends java.util.Observable{
  int x,y;
- 
+    
     String digital = "";
     String store = "";
     String decide = "";
@@ -55,7 +55,6 @@ public class Calculator extends java.util.Observable{
                 digital = "0";
                 getDisplay();
                 digital = "";
-                
                 break;
             case CLEAR_ENTRY:
                 break;
@@ -146,12 +145,12 @@ public class Calculator extends java.util.Observable{
     /**
      * @param args the command line arguments
      */
-    public  void notation(String pop)
+    public  void sign(String pop)
         // TODO code application logic here
     {
         if(pop == "+") performOperation(Operator.PLUS);
         if(pop == "=") performOperation(Operator.EQUAL);
-        if(pop == "C") performOperation(Operator.CLEAR);
+        if(pop == "c") performOperation(Operator.CLEAR);
         if(pop == "-") performOperation(Operator.MINUS);
         if(pop == "*") performOperation(Operator.TIMES);
         if(pop == "/") performOperation(Operator.OVER);
