@@ -20,6 +20,7 @@ public class aaa extends javax.swing.JFrame  implements java.util.Observer{
     private double num2 = 0.0;
     
     public aaa() {
+       cal = mModel;
         initComponents();
     }
 
