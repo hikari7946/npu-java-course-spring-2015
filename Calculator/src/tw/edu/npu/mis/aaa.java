@@ -6,6 +6,7 @@
 package tw.edu.npu.mis;
 
 import java.util.Observable;
+import tw.edu.npu.mis.Calculator.Operator;
 
 /**
  *
@@ -14,15 +15,15 @@ import java.util.Observable;
 public class aaa extends javax.swing.JFrame  implements java.util.Observer{
     Calculator cal;
 
+  
     /**
-     * Creates new form aaa
+     * Creates new form newjframe
      */
-    
     private double num1 = 0.0;
     private double num2 = 0.0;
     
-    public aaa() {
-       cal = mModel;
+    public aaa( Calculator mModel) {
+        cal = mModel;
         initComponents();
     }
 
@@ -384,7 +385,9 @@ public class aaa extends javax.swing.JFrame  implements java.util.Observer{
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -398,21 +401,21 @@ public class aaa extends javax.swing.JFrame  implements java.util.Observer{
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(aaa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(newjframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(aaa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(newjframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(aaa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(newjframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(aaa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(newjframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
-         java.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 Calculator model = new Calculator();
-               aaa view = new aaa(model);
+              aaa view = new aaa(model);
                 view.setVisible(true);
                 model.addObserver(view);
             }
