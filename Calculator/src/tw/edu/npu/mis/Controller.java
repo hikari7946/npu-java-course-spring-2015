@@ -13,4 +13,10 @@ public class Controller {
     Calculator Cal;
     aaa mnewjframe;
     
+     public Controller(Calculator cal)
+    {
+        Cal = cal;
+    }
+    
 }
+
