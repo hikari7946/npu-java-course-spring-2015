@@ -50,8 +50,6 @@ public class aaa extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextField1.setText("jTextField1");
-
         jButton1.setText("c");
 
         jButton2.setText("+/-");
