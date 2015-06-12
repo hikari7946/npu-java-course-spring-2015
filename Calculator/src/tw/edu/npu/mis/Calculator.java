@@ -9,11 +9,10 @@ package tw.edu.npu.mis;
  * The model class of the calculator application.
  */
 public class Calculator extends java.util.Observable{
- int x,y;
- 
-    String number = "";
-    String Access = "";
-    String Determine = "";
+    int x,y;
+    String store = "";
+    String digital = "";
+    String decide = "";
     
     /**
      * The available operators of the calculator.
@@ -40,7 +39,7 @@ public class Calculator extends java.util.Observable{
     
     public void appendDigit(int digit) {
         // TODO code application logic here
-         number += String.valueOf(digit);
+         digital += String.valueOf(digit);
       getDisplay();
     }
     
@@ -52,10 +51,9 @@ public class Calculator extends java.util.Observable{
         // TODO code application logic here
          switch(operator){
             case CLEAR:
-                number = "0";
+                digital = "";
                 getDisplay();
-                number = "";
-                
+                digital = "";
                 break;
             case CLEAR_ENTRY:
                 break;
@@ -63,53 +61,53 @@ public class Calculator extends java.util.Observable{
                 break;
             case EQUAL:
                 
-               if(Determine == "+"){
-                        y= Integer.parseInt(number);
-                        number = String.valueOf(x+y);
+               if(decide == "+"){
+                        y= Integer.parseInt(digital);
+                        digital = String.valueOf(x+y);
                         getDisplay();
-                        number ="";
+                        digital ="";
                }
-             if(Determine == "-"){
-                        y= Integer.parseInt(number);
-                        number = String.valueOf(x-y);
+             if(decide == "-"){
+                        y= Integer.parseInt(digital);
+                        digital = String.valueOf(x-y);
                         getDisplay();
-                        number ="";
+                        digital ="";
                }
-             if(Determine == "*"){
-                        y= Integer.parseInt(number);
-                        number = String.valueOf(x*y);
+             if(decide == "*"){
+                        y= Integer.parseInt(digital);
+                       digital = String.valueOf(x*y);
                         getDisplay();
-                        number ="";
+                        digital ="";
                }
-             if(Determine == "/"){
-                        y= Integer.parseInt(number);
-                        number = String.valueOf(x/y);
+             if(decide == "/"){
+                        y= Integer.parseInt(digital);
+                       digital = String.valueOf(x/y);
                         getDisplay();
-                        number ="";
+                        digital ="";
                }
             case PLUS:
-                x= Integer.parseInt(number);
-                number = "";
+                x= Integer.parseInt(digital);
+                digital = "";
                 getDisplay();
-                Determine = "+";
+                decide = "+";
                 break;
             case MINUS:
-                x= Integer.parseInt(number);
-                number = "";
+                x= Integer.parseInt(digital);
+                digital = "";
                 getDisplay();
-                Determine = "-";
+                decide = "-";
                 break;
             case TIMES:
-                x= Integer.parseInt(number);
-                number = "";
+                x= Integer.parseInt(digital);
+                digital = "";
                 getDisplay();
-                Determine = "*";
+                decide = "*";
                 break;
             case OVER:
-                x= Integer.parseInt(number);
-                number = "";
+                x= Integer.parseInt(digital);
+                digital = "";
                 getDisplay();
-                Determine = "/";
+                decide = "/";
                 break;
             case PLUS_MINUS:
                 break;
@@ -139,22 +137,22 @@ public class Calculator extends java.util.Observable{
     public String getDisplay() {
         // TODO code application logic here
        setChanged();
-        notifyObservers(number);
+        notifyObservers(digital);
         return null;
     }
 
     /**
      * @param args the command line arguments
      */
-    public  void notation(String tnt)
+    public  void notation(String pop)
         // TODO code application logic here
     {
-        if(tnt == "+") performOperation(Operator.PLUS);
-        if(tnt == "=") performOperation(Operator.EQUAL);
-        if(tnt == "C") performOperation(Operator.CLEAR);
-        if(tnt == "-") performOperation(Operator.MINUS);
-        if(tnt == "*") performOperation(Operator.TIMES);
-        if(tnt == "/") performOperation(Operator.OVER);
+        if(pop == "+") performOperation(Operator.PLUS);
+        if(pop == "=") performOperation(Operator.EQUAL);
+        if(pop == "C") performOperation(Operator.CLEAR);
+        if(pop == "-") performOperation(Operator.MINUS);
+        if(pop == "*") performOperation(Operator.TIMES);
+        if(pop == "/") performOperation(Operator.OVER);
     }
     
 
