@@ -141,6 +141,8 @@ public class Calculator extends java.util.Observable{
     
     public String getDisplay() {
         // TODO code application logic here
+       setChanged();
+        notifyObservers(number);
         return null;
     }
 
