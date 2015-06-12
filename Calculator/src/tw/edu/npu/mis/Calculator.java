@@ -146,15 +146,15 @@ public class Calculator extends java.util.Observable{
     /**
      * @param args the command line arguments
      */
-    public  void notation(String tnt)
+    public  void notation(String pop)
         // TODO code application logic here
     {
-        if(tnt == "+") performOperation(Operator.PLUS);
-        if(tnt == "=") performOperation(Operator.EQUAL);
-        if(tnt == "C") performOperation(Operator.CLEAR);
-        if(tnt == "-") performOperation(Operator.MINUS);
-        if(tnt == "*") performOperation(Operator.TIMES);
-        if(tnt == "/") performOperation(Operator.OVER);
+        if(pop == "+") performOperation(Operator.PLUS);
+        if(pop == "=") performOperation(Operator.EQUAL);
+        if(pop == "C") performOperation(Operator.CLEAR);
+        if(pop == "-") performOperation(Operator.MINUS);
+        if(pop == "*") performOperation(Operator.TIMES);
+        if(pop == "/") performOperation(Operator.OVER);
     }
     
 
