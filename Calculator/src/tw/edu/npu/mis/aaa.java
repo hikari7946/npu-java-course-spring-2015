@@ -444,6 +444,6 @@ public class aaa extends javax.swing.JFrame  implements java.util.Observer{
 
     @Override
     public void update(Observable o, Object arg) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        jTextField1.setText(arg.toString());
     }
 }
