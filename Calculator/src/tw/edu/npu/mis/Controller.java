@@ -10,8 +10,18 @@ package tw.edu.npu.mis;
  * @author STP
  */
 public class Controller {
+    Calculator Cal;
     aaa mnewjframe;
-    Calculator mcul;
+    
+     public Controller(Calculator cal)
+    {
+        Cal = cal;
+    }
+     public void setData(String da)
+    {
+        Cal.appendDigit(Integer.parseInt(da));
+        
+    }
     
 }
 
