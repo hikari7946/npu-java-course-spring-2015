@@ -15,6 +15,9 @@ public class newjframe extends javax.swing.JFrame  implements java.util.Observer
     /**
      * Creates new form aaa
      */
+    
+     private double num1 = 0.0;
+    private double num2 = 0.0;
     public aaa() {
         initComponents();
     }
