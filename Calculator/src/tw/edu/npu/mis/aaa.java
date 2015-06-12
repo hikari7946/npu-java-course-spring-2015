@@ -13,17 +13,16 @@ import tw.edu.npu.mis.Calculator.Operator;
  * @author STP
  */
 public class aaa extends javax.swing.JFrame  implements java.util.Observer{
-    Calculator mcul;
+    Controller mcul;
 
   
     /**
      * Creates new form newjframe
      */
-    private double num1 = 0.0;
-    private double num2 = 0.0;
     
-    public aaa( Calculator mModel) {
-        mcul = mModel;
+    
+     public aaa(Controller model) {
+        mcul = model;
         initComponents();
     }
 
@@ -385,7 +384,7 @@ public class aaa extends javax.swing.JFrame  implements java.util.Observer{
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         // TODO code application logic here
         
         /* Set the Nimbus look and feel */
@@ -401,23 +400,25 @@ public class aaa extends javax.swing.JFrame  implements java.util.Observer{
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(aaa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(newjframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(aaa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(newjframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(aaa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(newjframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(aaa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(newjframe.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Calculator model = new Calculator();
-              aaa view = new aaa(model);
+                Calculator mcul = new Calculator();
+                Controller ss = new Controller(mcul);
+                aaa view = new aaa(ss);
+                ss.addView(view);
                 view.setVisible(true);
-                model.addObserver(view);
+                mcul.addObserver(view);
             }
         });
     }

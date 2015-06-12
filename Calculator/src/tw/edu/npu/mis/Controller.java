@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package tw.edu.npu.mis;
+import tw.edu.npu.mis.Calculator.Operator;
 
 /**
  *
