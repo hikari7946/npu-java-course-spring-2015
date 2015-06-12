@@ -17,6 +17,11 @@ public class Controller {
     {
         Cal = cal;
     }
+     public void setData(String da)
+    {
+        Cal.appendDigit(Integer.parseInt(da));
+        
+    }
     
 }
 
