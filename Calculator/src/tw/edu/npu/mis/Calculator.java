@@ -62,34 +62,31 @@ public class Calculator extends java.util.Observable{
             case BACKSPACE:
                 break;
             case EQUAL:
-               switch(Determine){
-                    case "+":
+                
+               if(Determine == "+"){
                         y= Integer.parseInt(number);
                         number = String.valueOf(x+y);
                         getDisplay();
                         number ="";
-                        break;
-                    case "-":
-                       y= Integer.parseInt(number);
+               }
+             if(Determine == "-"){
+                        y= Integer.parseInt(number);
                         number = String.valueOf(x-y);
                         getDisplay();
                         number ="";
-                         break;
-                    case "*":
-                       y= Integer.parseInt(number);
+               }
+             if(Determine == "*"){
+                        y= Integer.parseInt(number);
                         number = String.valueOf(x*y);
                         getDisplay();
                         number ="";
-                         break;
-                    case "/":
-                       y= Integer.parseInt(number);
+               }
+             if(Determine == "/"){
+                        y= Integer.parseInt(number);
                         number = String.valueOf(x/y);
                         getDisplay();
                         number ="";
-                         break;
                }
-              
-                break;
             case PLUS:
                 x= Integer.parseInt(number);
                 number = "";
