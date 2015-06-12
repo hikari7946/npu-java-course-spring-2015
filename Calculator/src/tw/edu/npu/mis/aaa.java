@@ -9,7 +9,7 @@ import java.util.Observable;
 import tw.edu.npu.mis.Calculator.Operator;
 
 /**
- *計算機畫面
+ *計算機介面
  * @author STP
  */
 public class aaa extends javax.swing.JFrame  implements java.util.Observer{
