@@ -5,6 +5,8 @@
  */
 package tw.edu.npu.mis;
 
+import java.util.Observable;
+
 /**
  *
  * @author STP
@@ -273,4 +275,9 @@ public class aaa extends javax.swing.JFrame  implements java.util.Observer{
     private javax.swing.JButton jButton9;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void update(Observable o, Object arg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
