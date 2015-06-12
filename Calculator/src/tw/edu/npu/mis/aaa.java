@@ -9,15 +9,16 @@ package tw.edu.npu.mis;
  *
  * @author STP
  */
-public class newjframe extends javax.swing.JFrame  implements java.util.Observer{
+public class aaa extends javax.swing.JFrame  implements java.util.Observer{
     Calculator cal;
 
     /**
      * Creates new form aaa
      */
     
-     private double num1 = 0.0;
+    private double num1 = 0.0;
     private double num2 = 0.0;
+    
     public aaa() {
         initComponents();
     }
