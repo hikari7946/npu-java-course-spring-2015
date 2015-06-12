@@ -304,7 +304,7 @@ public class aaa extends javax.swing.JFrame  implements java.util.Observer{
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        cal.appendDigit(Integer.parseInt(jButton1.getText()));
+         cal.notation(jButton1.getText());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
