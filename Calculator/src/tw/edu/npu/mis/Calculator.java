@@ -11,9 +11,9 @@ package tw.edu.npu.mis;
 public class Calculator extends java.util.Observable{
  int x,y;
     
-    String digital = "";
-    String store = "";
-    String decide = "";
+    String digital = ""; //digital是運算結果
+    String store = "";//store是存取地方
+    String decide = "";//判斷加減乘除
     
     /**
      * The available operators of the calculator.
@@ -47,7 +47,10 @@ public class Calculator extends java.util.Observable{
     public void appendDot() {
         // TODO code application logic here
     }
-    
+    /**
+     * 運算方法 清除 加減乘除 
+     * @param operator 
+     */
     public void performOperation(Operator operator) {
         // TODO code application logic here
          switch(operator){
@@ -134,7 +137,10 @@ public class Calculator extends java.util.Observable{
         }
     
     }
-    
+    /**
+     * 回傳運算結果
+     * @return 
+     */
     public String getDisplay() {
         // TODO code application logic here
        setChanged();
@@ -144,6 +150,12 @@ public class Calculator extends java.util.Observable{
 
     /**
      * @param args the command line arguments
+     */
+    /**
+     * Controller 跟 aaa 的橋樑  
+     * Controller讀取這邊
+     * aaa再從 Controller那邊讀取
+     * @param pop 
      */
     public  void sign(String pop)
         // TODO code application logic here
